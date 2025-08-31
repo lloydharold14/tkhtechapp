@@ -59,13 +59,13 @@ const Footer = () => {
               <h3 className="text-2xl font-bold gradient-text">TKH TECH</h3>
             </Link>
             <div className="space-y-2 text-secondary-300">
-              <p>123 Innovation Drive</p>
-              <p>Tech Valley, CA 94000</p>
+              <p>777 Boulevard Le Corbusier</p>
+              <p>Montreal, QC, Canada</p>
               <p className="mt-4">
-                <strong>Phone:</strong> +1 (555) 123-TECH
+                <strong>Phone:</strong> +1 (438) 887-1040
               </p>
               <p>
-                <strong>Email:</strong> hello@tkhtech.com
+                <strong>Email:</strong> info@tkhtech.com
               </p>
             </div>
           </div>

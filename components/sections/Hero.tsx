@@ -32,8 +32,8 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-xl text-secondary-600 mb-8 leading-relaxed"
             >
-              TKH TECH Inc. delivers cutting-edge software development services, from web applications 
-              to mobile apps and enterprise solutions. We transform your ideas into powerful digital experiences.
+              Specializing in native mobile app development for iOS and Android, powered by robust cloud infrastructure and backend solutions. 
+              We create high-performance mobile experiences that engage users and drive business success.
             </motion.p>
             
             <motion.div

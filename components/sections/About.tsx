@@ -10,10 +10,10 @@ const About = () => {
   });
 
   const features = [
-    'Full-stack web development using modern frameworks like React, Node.js, and Python',
-    'Mobile app development for iOS and Android platforms',
-    'Cloud infrastructure and DevOps solutions for scalable deployments',
-    'Enterprise software solutions and API integrations',
+    'Native iOS apps built with Swift and SwiftUI for optimal performance',
+    'Native Android apps developed with Kotlin and Jetpack Compose',
+    'Cloud backend infrastructure using AWS, Firebase, and Node.js',
+    'Real-time features, push notifications, and offline-first architecture',
   ];
 
   const stats = [
@@ -77,12 +77,13 @@ const About = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <h3 className="text-3xl font-bold text-secondary-800 mb-6">
-              Empowering businesses through cutting-edge software development and technology innovation.
+              Crafting exceptional native mobile experiences that users love and businesses rely on.
             </h3>
             
             <p className="text-lg text-secondary-600 mb-8 italic">
-              At TKH TECH Inc., we specialize in creating robust, scalable software solutions that drive digital transformation. 
-              Our team of expert developers combines technical excellence with creative problem-solving to deliver exceptional results.
+              TKH TECH Inc. specializes in native mobile app development, creating powerful iOS and Android applications that deliver 
+              seamless user experiences. Based in Montreal, our team combines mobile expertise with cloud infrastructure knowledge 
+              to build apps that scale from prototype to millions of users.
             </p>
 
             {/* Features List */}
@@ -102,8 +103,9 @@ const About = () => {
             </ul>
 
             <p className="text-secondary-600 mb-8">
-              We pride ourselves on delivering high-quality software that not only meets but exceeds our clients' expectations. 
-              From startups to enterprise-level organizations, we provide tailored solutions that drive growth and innovation.
+              Our approach combines agile methodology with cutting-edge technology to deliver solutions that scale. 
+              From healthcare systems to event management platforms, we've built software that serves thousands of users 
+              while maintaining the highest standards of security and performance.
             </p>
           </motion.div>
         </div>

@@ -14,84 +14,84 @@ const Portfolio = () => {
 
   const filters = [
     { id: '*', label: 'All' },
-    { id: 'web', label: 'Web Apps' },
-    { id: 'mobile', label: 'Mobile Apps' },
+    { id: 'ios', label: 'iOS Apps' },
+    { id: 'android', label: 'Android Apps' },
+    { id: 'saas', label: 'SaaS Apps' },
     { id: 'enterprise', label: 'Enterprise' },
-    { id: 'cloud', label: 'Cloud Solutions' },
   ];
 
   const projects = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
-      description: 'Full-stack React/Node.js e-commerce solution',
-      category: 'web',
+      title: 'LiveIt Event App',
+      description: 'Native mobile app for discovering and managing local events',
+      category: 'ios',
       image: '/portfolio/app-1.jpg',
-      technologies: ['React', 'Node.js', 'MongoDB'],
+      technologies: ['Swift', 'SwiftUI', 'Firebase'],
     },
     {
       id: 2,
-      title: 'FinTech Mobile App',
-      description: 'React Native financial management application',
-      category: 'mobile',
-      image: '/portfolio/product-1.jpg',
-      technologies: ['React Native', 'Firebase', 'Stripe'],
+      title: 'LiveIt Event App',
+      description: 'Native Android version with real-time event updates',
+      category: 'android',
+      image: '/portfolio/app-2.jpg',
+      technologies: ['Kotlin', 'Jetpack Compose', 'Firebase'],
     },
     {
       id: 3,
-      title: 'Enterprise CRM System',
-      description: 'Custom Python Django CRM for enterprise clients',
-      category: 'enterprise',
+      title: 'School Management SaaS',
+      description: 'Comprehensive school administration mobile platform',
+      category: 'saas',
       image: '/portfolio/branding-1.jpg',
-      technologies: ['Python', 'Django', 'PostgreSQL'],
+      technologies: ['React Native', 'Node.js', 'PostgreSQL'],
     },
     {
       id: 4,
-      title: 'AWS Cloud Migration',
-      description: 'Scalable cloud infrastructure deployment',
-      category: 'cloud',
-      image: '/portfolio/books-1.jpg',
-      technologies: ['AWS', 'Docker', 'Kubernetes'],
+      title: 'Electronic Health Record SaaS',
+      description: 'HIPAA-compliant mobile health records management',
+      category: 'saas',
+      image: '/portfolio/product-1.jpg',
+      technologies: ['Swift', 'Kotlin', 'AWS Health'],
     },
     {
       id: 5,
-      title: 'SaaS Dashboard',
-      description: 'Vue.js analytics and reporting platform',
-      category: 'web',
-      image: '/portfolio/app-2.jpg',
-      technologies: ['Vue.js', 'Chart.js', 'Express'],
+      title: 'School Management iOS',
+      description: 'Native iOS app for teachers and administrators',
+      category: 'ios',
+      image: '/portfolio/branding-2.jpg',
+      technologies: ['Swift', 'Core Data', 'CloudKit'],
     },
     {
       id: 6,
-      title: 'Healthcare Mobile App',
-      description: 'Flutter cross-platform health monitoring app',
-      category: 'mobile',
-      image: '/portfolio/product-2.jpg',
-      technologies: ['Flutter', 'Firebase', 'REST API'],
+      title: 'School Management Android',
+      description: 'Native Android app with offline-first architecture',
+      category: 'android',
+      image: '/portfolio/branding-3.jpg',
+      technologies: ['Kotlin', 'Room DB', 'Work Manager'],
     },
     {
       id: 7,
-      title: 'Manufacturing ERP',
-      description: 'Enterprise resource planning system',
+      title: 'EHR Mobile Dashboard',
+      description: 'Real-time patient monitoring and data visualization',
       category: 'enterprise',
-      image: '/portfolio/branding-2.jpg',
-      technologies: ['Java', 'Spring Boot', 'Oracle'],
+      image: '/portfolio/product-2.jpg',
+      technologies: ['Flutter', 'GraphQL', 'HL7 FHIR'],
     },
     {
       id: 8,
-      title: 'Kubernetes Deployment',
-      description: 'Containerized microservices architecture',
-      category: 'cloud',
-      image: '/portfolio/books-2.jpg',
-      technologies: ['Kubernetes', 'Docker', 'Jenkins'],
+      title: 'Event Analytics Platform',
+      description: 'Mobile analytics dashboard for event organizers',
+      category: 'enterprise',
+      image: '/portfolio/app-3.jpg',
+      technologies: ['React Native', 'Chart.js', 'AWS Lambda'],
     },
     {
       id: 9,
-      title: 'Real Estate Platform',
-      description: 'Angular property management web application',
-      category: 'web',
-      image: '/portfolio/app-3.jpg',
-      technologies: ['Angular', 'TypeScript', 'Firebase'],
+      title: 'Healthcare Provider Portal',
+      description: 'Native mobile app for healthcare professionals',
+      category: 'ios',
+      image: '/portfolio/product-3.jpg',
+      technologies: ['SwiftUI', 'HealthKit', 'Core ML'],
     },
   ];
 
@@ -124,11 +124,11 @@ const Portfolio = () => {
           transition={{ duration: 0.8 }}
           className="section-title"
         >
-          <span className="section-subtitle">Portfolio</span>
-          <h2 className="section-heading">Our Software Development Projects</h2>
-          <p className="section-description">
-            Explore our diverse portfolio of successful software solutions across web, mobile, and enterprise applications
-          </p>
+                  <span className="section-subtitle">Portfolio</span>
+        <h2 className="section-heading">Our Native Mobile App Projects</h2>
+        <p className="section-description">
+          Discover our portfolio of successful native mobile applications that have transformed businesses and delighted users
+        </p>
         </motion.div>
 
         {/* Filter Buttons */}

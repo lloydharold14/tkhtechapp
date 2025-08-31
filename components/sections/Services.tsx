@@ -17,39 +17,39 @@ const Services = () => {
 
   const services = [
     {
-      icon: CodeBracketIcon,
-      title: 'Custom Web Applications',
-      description: 'Full-stack web development using React, Angular, Vue.js, Node.js, Python Django, and other modern technologies for responsive and scalable applications.',
+      icon: DevicePhoneMobileIcon,
+      title: 'Native iOS Development',
+      description: 'High-performance iOS apps built with Swift and SwiftUI, optimized for all Apple devices with seamless App Store integration.',
       color: 'bg-orange-500',
     },
     {
       icon: DevicePhoneMobileIcon,
-      title: 'Mobile App Development',
-      description: 'Native iOS and Android applications, as well as cross-platform solutions using React Native and Flutter for maximum reach and performance.',
+      title: 'Native Android Development',
+      description: 'Modern Android applications using Kotlin and Jetpack Compose, delivering smooth performance across all Android devices.',
       color: 'bg-amber-500',
     },
     {
       icon: CloudIcon,
-      title: 'Cloud & DevOps Solutions',
-      description: 'AWS, Azure, and Google Cloud infrastructure setup, containerization with Docker, CI/CD pipelines, and automated deployment solutions.',
+      title: 'Mobile Backend & APIs',
+      description: 'Scalable cloud backends with Firebase, AWS, and Node.js to power your mobile apps with real-time data and authentication.',
       color: 'bg-yellow-500',
     },
     {
       icon: CubeIcon,
-      title: 'Enterprise Software',
-      description: 'Large-scale enterprise applications, ERP systems, CRM solutions, and complex business process automation tailored to your organization\'s needs.',
+      title: 'App Store Optimization',
+      description: 'Complete App Store and Google Play deployment, including ASO strategies to maximize visibility and downloads.',
       color: 'bg-red-500',
     },
     {
       icon: LinkIcon,
-      title: 'API Development & Integration',
-      description: 'RESTful APIs, GraphQL, microservices architecture, and third-party integrations to connect your systems and enhance functionality.',
+      title: 'Third-party Integrations',
+      description: 'Seamless integration with payment gateways, social media APIs, mapping services, and enterprise systems.',
       color: 'bg-rose-500',
     },
     {
       icon: PaintBrushIcon,
-      title: 'UI/UX Design & Consulting',
-      description: 'User-centered design, prototyping, technical consulting, and digital strategy to ensure your software delivers exceptional user experiences.',
+      title: 'Mobile UI/UX Design',
+      description: 'User-centric mobile design following iOS Human Interface Guidelines and Material Design principles for optimal user experience.',
       color: 'bg-orange-600',
     },
   ];
@@ -80,11 +80,11 @@ const Services = () => {
           className="section-title"
         >
           <motion.div variants={item}>
-            <span className="section-subtitle">Services</span>
-            <h2 className="section-heading">Our Software Development Services</h2>
-            <p className="section-description">
-              Comprehensive technology solutions designed to accelerate your business growth and digital transformation
-            </p>
+                    <span className="section-subtitle">Services</span>
+        <h2 className="section-heading">Native Mobile App Development Services</h2>
+        <p className="section-description">
+          Specialized mobile solutions that deliver exceptional user experiences and drive business growth
+        </p>
           </motion.div>
         </motion.div>
 

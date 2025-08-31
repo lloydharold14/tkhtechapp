@@ -3,6 +3,7 @@ import Hero from '@/components/sections/Hero';
 import About from '@/components/sections/About';
 import Services from '@/components/sections/Services';
 import Portfolio from '@/components/sections/Portfolio';
+import Team from '@/components/sections/Team';
 import Contact from '@/components/sections/Contact';
 import { motion } from 'framer-motion';
 
@@ -12,11 +13,11 @@ const FeaturedServices = () => {
     {
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
         </svg>
       ),
-      title: 'Web Development',
-      description: 'Custom web applications built with modern frameworks and technologies for optimal performance and user experience',
+      title: 'Native iOS Development',
+      description: 'High-performance iOS applications built with Swift and SwiftUI, optimized for the Apple ecosystem',
     },
     {
       icon: (
@@ -24,8 +25,8 @@ const FeaturedServices = () => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
         </svg>
       ),
-      title: 'Mobile App Development',
-      description: 'Native and cross-platform mobile applications for iOS and Android that engage users and drive business growth',
+      title: 'Native Android Development',
+      description: 'Modern Android applications using Kotlin and Jetpack Compose for superior performance and user experience',
     },
     {
       icon: (
@@ -33,8 +34,8 @@ const FeaturedServices = () => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10" />
         </svg>
       ),
-      title: 'Cloud Solutions',
-      description: 'Scalable cloud infrastructure and DevOps solutions to optimize your application deployment and management',
+      title: 'Mobile Backend & Cloud',
+      description: 'Scalable cloud backends with Firebase, AWS, and real-time APIs to power your mobile applications',
     },
   ];
 
@@ -109,6 +110,7 @@ export default function Home() {
       <About />
       <Services />
       <Portfolio />
+      <Team />
       <CallToAction />
       <Contact />
     </Layout>

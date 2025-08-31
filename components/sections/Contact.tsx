@@ -12,17 +12,17 @@ const Contact = () => {
     {
       icon: MapPinIcon,
       title: 'Address',
-      details: ['TKH TECH Inc.', '123 Innovation Drive', 'Tech Valley, CA 94000'],
+      details: ['TKH TECH Inc.', '777 Boulevard Le Corbusier', 'Montreal, QC, Canada'],
     },
     {
       icon: PhoneIcon,
       title: 'Call Us',
-      details: ['+1 (555) 123-TECH'],
+      details: ['+1 (438) 887-1040'],
     },
     {
       icon: EnvelopeIcon,
       title: 'Email Us',
-      details: ['hello@tkhtech.com'],
+      details: ['info@tkhtech.com'],
     },
   ];
 
