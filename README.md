@@ -112,11 +112,60 @@ npm run start
 
 ## 📧 Contact Form
 
-The contact form is ready for integration with:
-- **Netlify Forms**
-- **Formspree**
-- **EmailJS**
-- **Custom API endpoints**
+The contact form is fully functional and can work with either AWS endpoints or Gmail SMTP.
+
+### Option 1: AWS Endpoint (Recommended for Production)
+
+If you have an existing AWS endpoint (Lambda, API Gateway, etc.):
+
+1. **Set Environment Variables:**
+   ```bash
+   # Create .env.local file in project root
+   NEXT_PUBLIC_AWS_CONTACT_ENDPOINT=https://your-aws-endpoint.amazonaws.com/contact
+   
+   # Optional: Add any required API keys
+   # AWS_API_KEY=your-api-key-here
+   # AWS_AUTH_TOKEN=your-auth-token-here
+   ```
+
+2. **Configure Headers (if needed):**
+   - Edit `config/contact.ts` to add any required headers
+   - Uncomment and configure Authorization headers if needed
+
+3. **Test the Contact Form:**
+   - Fill out the form on your website
+   - Check your AWS endpoint logs
+   - Messages will be sent to your configured destination
+
+### Option 2: Gmail SMTP (Alternative)
+
+If you prefer to use Gmail for email sending:
+
+1. **Create a Gmail App Password:**
+   - Go to your Google Account settings
+   - Enable 2-Factor Authentication
+   - Generate an App Password for "Mail"
+
+2. **Create Environment Variables:**
+   ```bash
+   # Create .env.local file in project root
+   GMAIL_USER=your-email@gmail.com
+   GMAIL_APP_PASSWORD=your-16-character-app-password
+   NODE_ENV=production
+   ```
+
+3. **Use Local API Endpoint:**
+   - The form will automatically use `/api/contact` if no AWS endpoint is configured
+
+### Features:
+- ✅ AWS endpoint integration
+- ✅ Server-side email validation
+- ✅ Beautiful HTML email templates
+- ✅ Loading states and error handling
+- ✅ Form reset after successful submission
+- ✅ Client-side form validation
+- ✅ Responsive design
+- ✅ Configurable headers and authentication
 
 ## 🔧 Scripts
 
