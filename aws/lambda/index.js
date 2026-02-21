@@ -165,11 +165,15 @@ exports.handler = async (event) => {
     const isProjectRequest = subject && subject.toLowerCase().includes('project request');
     const resolvedSubject = subject || `New message from ${name} via TKH TECH website`;
 
-    // Send both emails in parallel
-    await Promise.all([
-      sendInternalEmail({ name, email, subject: resolvedSubject, message }),
-      sendAutoReply({ name, email, isProjectRequest }),
-    ]);
+    // Send internal notification (always required)
+    await sendInternalEmail({ name, email, subject: resolvedSubject, message });
+
+    // Send auto-reply (best-effort — won't block if it fails e.g. sandbox mode)
+    try {
+      await sendAutoReply({ name, email, isProjectRequest });
+    } catch (autoReplyErr) {
+      console.warn('Auto-reply not sent (SES sandbox or unverified recipient):', autoReplyErr.message);
+    }
 
     return {
       statusCode: 200,
