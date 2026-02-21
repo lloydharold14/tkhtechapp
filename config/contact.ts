@@ -1,7 +1,7 @@
 // Contact form configuration
 export const contactConfig = {
   // AWS Endpoint Configuration
-  awsEndpoint: process.env.NEXT_PUBLIC_AWS_CONTACT_ENDPOINT || 'https://your-aws-endpoint.amazonaws.com/contact',
+  awsEndpoint: process.env.NEXT_PUBLIC_AWS_CONTACT_ENDPOINT || 'https://89e0poya3f.execute-api.ca-central-1.amazonaws.com/prod/contact',
   
   // Headers for AWS endpoint (add any required headers)
   headers: {
