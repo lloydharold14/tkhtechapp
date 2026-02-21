@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
@@ -66,7 +67,13 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-4">
-              <h3 className="text-2xl font-bold gradient-text">TKH TECH</h3>
+              <Image
+                src="/logo.png"
+                alt="TKH TECH Inc."
+                width={140}
+                height={42}
+                className="h-9 w-auto object-contain"
+              />
             </Link>
             <p className="text-secondary-300 text-sm mb-4 leading-relaxed">
               {t('footer.tagline')}
