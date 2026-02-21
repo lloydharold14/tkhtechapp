@@ -1,12 +1,10 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import {
-  CodeBracketIcon,
-  DevicePhoneMobileIcon,
-  CloudIcon,
-  CubeIcon,
-  LinkIcon,
+  CubeTransparentIcon,
+  BoltIcon,
   PaintBrushIcon,
+  WrenchScrewdriverIcon,
 } from '@heroicons/react/24/outline';
 
 const Services = () => {
@@ -17,40 +15,40 @@ const Services = () => {
 
   const services = [
     {
-      icon: DevicePhoneMobileIcon,
-      title: 'Native iOS Development',
-      description: 'High-performance iOS apps built with Swift and SwiftUI, optimized for all Apple devices with seamless App Store integration.',
+      icon: CubeTransparentIcon,
+      title: 'Custom SaaS Development',
+      description:
+        'We architect and build fully custom SaaS applications from the ground up. Every line of code is written for your specific use case — no templates, no shortcuts. We handle full-stack development: backend APIs, databases, cloud infrastructure, and web or mobile frontends.',
+      highlights: ['Full-stack architecture', 'Cloud-native infrastructure', 'Scalable from day one'],
       color: 'bg-orange-500',
+      gradient: 'from-orange-500 to-amber-500',
     },
     {
-      icon: DevicePhoneMobileIcon,
-      title: 'Native Android Development',
-      description: 'Modern Android applications using Kotlin and Jetpack Compose, delivering smooth performance across all Android devices.',
+      icon: BoltIcon,
+      title: 'MVP Prototyping',
+      description:
+        'Got an idea but need to validate it fast? We build focused MVPs that get you to market quickly. We strip down to the essential features, ship a working product, and help you gather real user feedback before you invest in the full build.',
+      highlights: ['Rapid 4–8 week delivery', 'Core feature focus', 'Investor-ready presentation'],
       color: 'bg-amber-500',
-    },
-    {
-      icon: CloudIcon,
-      title: 'Mobile Backend & APIs',
-      description: 'Scalable cloud backends with Firebase, AWS, and Node.js to power your mobile apps with real-time data and authentication.',
-      color: 'bg-yellow-500',
-    },
-    {
-      icon: CubeIcon,
-      title: 'App Store Optimization',
-      description: 'Complete App Store and Google Play deployment, including ASO strategies to maximize visibility and downloads.',
-      color: 'bg-red-500',
-    },
-    {
-      icon: LinkIcon,
-      title: 'Third-party Integrations',
-      description: 'Seamless integration with payment gateways, social media APIs, mapping services, and enterprise systems.',
-      color: 'bg-rose-500',
+      gradient: 'from-amber-500 to-yellow-500',
     },
     {
       icon: PaintBrushIcon,
-      title: 'Mobile UI/UX Design',
-      description: 'User-centric mobile design following iOS Human Interface Guidelines and Material Design principles for optimal user experience.',
-      color: 'bg-orange-600',
+      title: 'Product Design',
+      description:
+        "Great software starts with great design. Our design process covers user research, wireframing, UI design, and interactive prototyping. We create interfaces that users love — intuitive, accessible, and aligned with your brand.",
+      highlights: ['UX research & wireframing', 'High-fidelity UI design', 'Interactive prototypes'],
+      color: 'bg-rose-500',
+      gradient: 'from-rose-500 to-orange-500',
+    },
+    {
+      icon: WrenchScrewdriverIcon,
+      title: 'Ongoing Support & Maintenance',
+      description:
+        'Shipping is just the beginning. We provide ongoing support, bug fixes, performance monitoring, and feature development as your product evolves. Think of us as your long-term engineering partner.',
+      highlights: ['Bug fixes & monitoring', 'Feature iterations', 'Performance optimization'],
+      color: 'bg-red-500',
+      gradient: 'from-red-500 to-rose-500',
     },
   ];
 
@@ -58,69 +56,69 @@ const Services = () => {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
+      transition: { staggerChildren: 0.15 },
     },
   };
 
   const item = {
     hidden: { opacity: 0, y: 50 },
-    show: { opacity: 1, y: 0 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
   };
 
   return (
-    <section id="services" className="section-padding bg-gray-50">
+    <section id="services" className="section-padding bg-gray-900">
       <div className="container-custom">
         <motion.div
           ref={ref}
-          initial="hidden"
-          animate={inView ? "show" : "hidden"}
-          variants={container}
+          initial={{ opacity: 0, y: 50 }}
+          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+          transition={{ duration: 0.8 }}
           className="section-title"
         >
-          <motion.div variants={item}>
-                    <span className="section-subtitle">Services</span>
-        <h2 className="section-heading">Native Mobile App Development Services</h2>
-        <p className="section-description">
-          Specialized mobile solutions that deliver exceptional user experiences and drive business growth
-        </p>
-          </motion.div>
+          <span className="section-subtitle">What We Do</span>
+          <h2 className="section-heading text-white">Services Built Around Your Needs</h2>
+          <p className="section-description text-gray-400">
+            From idea to production — we offer every service you need to build, launch, and grow your SaaS product.
+          </p>
         </motion.div>
 
         <motion.div
           initial="hidden"
-          animate={inView ? "show" : "hidden"}
+          animate={inView ? 'show' : 'hidden'}
           variants={container}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 gap-8"
         >
-          {services.map((service, index) => (
+          {services.map((service) => (
             <motion.div
               key={service.title}
               variants={item}
-              className="service-card group"
+              className="group relative bg-gray-800 rounded-2xl p-8 border border-gray-700 hover:border-orange-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-orange-500/10"
             >
-              <div className="flex items-center mb-6">
-                <div className={`w-12 h-12 ${service.color} rounded-lg flex items-center justify-center mr-4`}>
-                  <service.icon className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-secondary-800 group-hover:text-primary-500 transition-colors duration-300">
-                  {service.title}
-                </h3>
+              {/* Icon */}
+              <div className={`w-14 h-14 ${service.color} rounded-xl flex items-center justify-center mb-6`}>
+                <service.icon className="w-7 h-7 text-white" />
               </div>
-              
-              <p className="text-secondary-600 leading-relaxed">
+
+              <h3 className="text-xl font-bold text-white mb-4 group-hover:text-orange-400 transition-colors duration-300">
+                {service.title}
+              </h3>
+
+              <p className="text-gray-400 leading-relaxed mb-6">
                 {service.description}
               </p>
-              
-              <div className="mt-6 pt-6 border-t border-gray-200">
-                <button className="text-primary-500 hover:text-primary-600 font-medium transition-colors duration-300 flex items-center">
-                  Learn More
-                  <svg className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </button>
-              </div>
+
+              {/* Highlights */}
+              <ul className="space-y-2">
+                {service.highlights.map((highlight) => (
+                  <li key={highlight} className="flex items-center text-sm text-gray-300">
+                    <span className="w-1.5 h-1.5 bg-orange-500 rounded-full mr-3 flex-shrink-0" />
+                    {highlight}
+                  </li>
+                ))}
+              </ul>
+
+              {/* Hover gradient border effect */}
+              <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300 pointer-events-none`} />
             </motion.div>
           ))}
         </motion.div>
