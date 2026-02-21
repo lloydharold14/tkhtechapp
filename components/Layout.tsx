@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import { useTranslation } from 'react-i18next';
 import Header from './Header';
 import Footer from './Footer';
 
@@ -12,29 +13,33 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({
   children,
-  title = 'TKH TECH Inc. - Innovative Software Development Solutions',
-  description = 'TKH TECH Inc. delivers cutting-edge software development services, from web applications to mobile apps and enterprise solutions. Transform your ideas into powerful digital experiences.',
-  keywords = 'software development, web development, mobile apps, enterprise software, cloud solutions, API development, React, Node.js, Python, TKH TECH'
+  title,
+  description,
+  keywords,
 }) => {
+  const { t } = useTranslation();
+  const metaTitle = title ?? t('meta.title');
+  const metaDescription = description ?? t('meta.description');
+  const metaKeywords = keywords ?? t('meta.keywords');
   return (
     <>
       <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
+        <title>{metaTitle}</title>
+        <meta name="description" content={metaDescription} />
+        <meta name="keywords" content={metaKeywords} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
+        <meta property="og:title" content={metaTitle} />
+        <meta property="og:description" content={metaDescription} />
         <meta property="og:image" content="/hero-img.png" />
         
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:title" content={title} />
-        <meta property="twitter:description" content={description} />
+        <meta property="twitter:title" content={metaTitle} />
+        <meta property="twitter:description" content={metaDescription} />
         <meta property="twitter:image" content="/hero-img.png" />
         
         {/* Favicons */}

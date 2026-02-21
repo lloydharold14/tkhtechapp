@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { useTranslation } from 'react-i18next';
 import {
   CubeTransparentIcon,
   BoltIcon,
@@ -8,48 +9,17 @@ import {
 } from '@heroicons/react/24/outline';
 
 const Services = () => {
+  const { t } = useTranslation();
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
 
   const services = [
-    {
-      icon: CubeTransparentIcon,
-      title: 'Custom SaaS Development',
-      description:
-        'We architect and build fully custom SaaS applications from the ground up. Every line of code is written for your specific use case — no templates, no shortcuts. We handle full-stack development: backend APIs, databases, cloud infrastructure, and web or mobile frontends.',
-      highlights: ['Full-stack architecture', 'Cloud-native infrastructure', 'Scalable from day one'],
-      color: 'bg-orange-500',
-      gradient: 'from-orange-500 to-amber-500',
-    },
-    {
-      icon: BoltIcon,
-      title: 'MVP Prototyping',
-      description:
-        'Got an idea but need to validate it fast? We build focused MVPs that get you to market quickly. We strip down to the essential features, ship a working product, and help you gather real user feedback before you invest in the full build.',
-      highlights: ['Rapid 4–8 week delivery', 'Core feature focus', 'Investor-ready presentation'],
-      color: 'bg-amber-500',
-      gradient: 'from-amber-500 to-yellow-500',
-    },
-    {
-      icon: PaintBrushIcon,
-      title: 'Product Design',
-      description:
-        "Great software starts with great design. Our design process covers user research, wireframing, UI design, and interactive prototyping. We create interfaces that users love — intuitive, accessible, and aligned with your brand.",
-      highlights: ['UX research & wireframing', 'High-fidelity UI design', 'Interactive prototypes'],
-      color: 'bg-rose-500',
-      gradient: 'from-rose-500 to-orange-500',
-    },
-    {
-      icon: WrenchScrewdriverIcon,
-      title: 'Ongoing Support & Maintenance',
-      description:
-        'Shipping is just the beginning. We provide ongoing support, bug fixes, performance monitoring, and feature development as your product evolves. Think of us as your long-term engineering partner.',
-      highlights: ['Bug fixes & monitoring', 'Feature iterations', 'Performance optimization'],
-      color: 'bg-red-500',
-      gradient: 'from-red-500 to-rose-500',
-    },
+    { icon: CubeTransparentIcon, key: 'customSaaS', color: 'bg-orange-500', gradient: 'from-orange-500 to-amber-500' },
+    { icon: BoltIcon, key: 'mvp', color: 'bg-amber-500', gradient: 'from-amber-500 to-yellow-500' },
+    { icon: PaintBrushIcon, key: 'productDesign', color: 'bg-rose-500', gradient: 'from-rose-500 to-orange-500' },
+    { icon: WrenchScrewdriverIcon, key: 'support', color: 'bg-red-500', gradient: 'from-red-500 to-rose-500' },
   ];
 
   const container = {
@@ -75,10 +45,10 @@ const Services = () => {
           transition={{ duration: 0.8 }}
           className="section-title"
         >
-          <span className="section-subtitle">What We Do</span>
-          <h2 className="section-heading text-white">Services Built Around Your Needs</h2>
+          <span className="section-subtitle">{t('services.subtitle')}</span>
+          <h2 className="section-heading text-white">{t('services.heading')}</h2>
           <p className="section-description text-gray-400">
-            From idea to production — we offer every service you need to build, launch, and grow your SaaS product.
+            {t('services.description')}
           </p>
         </motion.div>
 
@@ -90,7 +60,7 @@ const Services = () => {
         >
           {services.map((service) => (
             <motion.div
-              key={service.title}
+              key={service.key}
               variants={item}
               className="group relative bg-gray-800 rounded-2xl p-8 border border-gray-700 hover:border-orange-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-orange-500/10"
             >
@@ -100,16 +70,16 @@ const Services = () => {
               </div>
 
               <h3 className="text-xl font-bold text-white mb-4 group-hover:text-orange-400 transition-colors duration-300">
-                {service.title}
+                {t(`services.items.${service.key}.title`)}
               </h3>
 
               <p className="text-gray-400 leading-relaxed mb-6">
-                {service.description}
+                {t(`services.items.${service.key}.description`)}
               </p>
 
               {/* Highlights */}
               <ul className="space-y-2">
-                {service.highlights.map((highlight) => (
+                {(t(`services.items.${service.key}.highlights`, { returnObjects: true }) as string[]).map((highlight) => (
                   <li key={highlight} className="flex items-center text-sm text-gray-300">
                     <span className="w-1.5 h-1.5 bg-orange-500 rounded-full mr-3 flex-shrink-0" />
                     {highlight}

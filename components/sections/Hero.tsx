@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
 import { RocketLaunchIcon, EyeIcon } from '@heroicons/react/24/outline';
 
 const Hero = () => {
+  const { t } = useTranslation();
   return (
     <section id="hero" className="relative min-h-screen flex items-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 overflow-hidden pt-20">
       {/* Background grid pattern */}
@@ -35,7 +37,7 @@ const Hero = () => {
             className="inline-flex items-center px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/30 text-orange-400 text-sm font-medium mb-8"
           >
             <span className="w-2 h-2 bg-orange-400 rounded-full mr-2 animate-pulse" />
-            Custom SaaS Development Studio
+            {t('hero.badge')}
           </motion.div>
 
           {/* Main Headline */}
@@ -45,8 +47,8 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 text-white"
           >
-            We Build the{' '}
-            <span className="gradient-text">SaaS You Need.</span>
+            {t('hero.headline')}{' '}
+            <span className="gradient-text">{t('hero.headlineHighlight')}</span>
           </motion.h1>
 
           {/* Subheadline */}
@@ -56,8 +58,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed max-w-3xl mx-auto"
           >
-            TKH TECH Inc. is your on-demand software group. Tell us your idea — we scope, design, and ship 
-            production-ready SaaS products tailored exactly to your business needs.
+            {t('hero.subheadline')}
           </motion.p>
 
           {/* CTA Buttons */}
@@ -72,7 +73,7 @@ const Hero = () => {
               className="btn-primary flex items-center justify-center text-lg px-8 py-4"
             >
               <RocketLaunchIcon className="w-5 h-5 mr-2" />
-              Request a Project
+              {t('hero.ctaRequest')}
             </Link>
 
             <Link
@@ -80,7 +81,7 @@ const Hero = () => {
               className="btn-outline flex items-center justify-center text-lg px-8 py-4 border-white/30 text-white hover:bg-white/10"
             >
               <EyeIcon className="w-5 h-5 mr-2" />
-              See Our Work
+              {t('hero.ctaWork')}
             </Link>
           </motion.div>
 
@@ -92,13 +93,13 @@ const Hero = () => {
             className="grid grid-cols-3 gap-8 mt-20 pt-12 border-t border-white/10 max-w-2xl mx-auto"
           >
             {[
-              { number: '4', label: 'Products Shipped' },
-              { number: '100%', label: 'Custom Built' },
-              { number: 'On-Demand', label: 'SaaS Development' },
+              { numberKey: 'productsShipped', labelKey: 'productsShipped' },
+              { numberKey: 'customBuilt', labelKey: 'customBuilt' },
+              { numberKey: 'saasDevelopment', labelKey: 'saasDevelopment' },
             ].map((stat) => (
-              <div key={stat.label} className="text-center">
-                <div className="text-3xl font-bold text-orange-400 mb-1">{stat.number}</div>
-                <div className="text-gray-400 text-sm">{stat.label}</div>
+              <div key={stat.labelKey} className="text-center">
+                <div className="text-3xl font-bold text-orange-400 mb-1">{t(`hero.statNumbers.${stat.numberKey}`)}</div>
+                <div className="text-gray-400 text-sm">{t(`hero.stats.${stat.labelKey}`)}</div>
               </div>
             ))}
           </motion.div>

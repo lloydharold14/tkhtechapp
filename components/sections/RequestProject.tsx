@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { useTranslation } from 'react-i18next';
 import { CheckCircleIcon, ExclamationTriangleIcon } from '@heroicons/react/24/outline';
 import { contactConfig } from '@/config/contact';
 
@@ -14,6 +15,7 @@ interface ProjectFormData {
 }
 
 const RequestProject = () => {
+  const { t } = useTranslation();
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -85,7 +87,7 @@ const RequestProject = () => {
     e.preventDefault();
     if (!validate()) return;
 
-    setFormStatus({ type: 'loading', message: 'Submitting your project request...' });
+    setFormStatus({ type: 'loading', message: t('requestProject.status.submitting') });
 
     try {
       const payload = {
@@ -112,19 +114,19 @@ const RequestProject = () => {
       if (response.ok && result.success !== false) {
         setFormStatus({
           type: 'success',
-          message: "Your project request has been submitted! We'll be in touch within 24 hours.",
+          message: t('requestProject.status.success'),
         });
         setFormData({ fullName: '', email: '', company: '', projectType: '', description: '', budget: '' });
       } else {
         setFormStatus({
           type: 'error',
-          message: result.message || 'Something went wrong. Please try again.',
+          message: result.message || t('requestProject.status.error'),
         });
       }
     } catch {
       setFormStatus({
         type: 'error',
-        message: 'Network error. Please check your connection and try again.',
+        message: t('requestProject.status.networkError'),
       });
     }
   };
@@ -146,11 +148,10 @@ const RequestProject = () => {
           transition={{ duration: 0.8 }}
           className="section-title"
         >
-          <span className="section-subtitle">Get Started</span>
-          <h2 className="section-heading text-white">Request a Project</h2>
+          <span className="section-subtitle">{t('requestProject.subtitle')}</span>
+          <h2 className="section-heading text-white">{t('requestProject.heading')}</h2>
           <p className="section-description text-gray-400">
-            Tell us about your idea. We'll review your submission and get back to you within 24 hours 
-            to schedule a discovery call.
+            {t('requestProject.description')}
           </p>
         </motion.div>
 
@@ -193,7 +194,7 @@ const RequestProject = () => {
               {/* Full Name */}
               <div>
                 <label htmlFor="fullName" className="block text-sm font-medium text-secondary-700 mb-2">
-                  Full Name <span className="text-red-500">*</span>
+                  {t('requestProject.form.fullName')} <span className="text-red-500">*</span>
                 </label>
                 <input
                   type="text"
@@ -203,7 +204,7 @@ const RequestProject = () => {
                   onChange={handleChange}
                   disabled={isLoading}
                   className={inputClass('fullName')}
-                  placeholder="John Smith"
+                  placeholder={t('requestProject.form.placeholderName')}
                 />
                 {errors.fullName && <p className="mt-1 text-sm text-red-500">{errors.fullName}</p>}
               </div>
@@ -211,7 +212,7 @@ const RequestProject = () => {
               {/* Email */}
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-secondary-700 mb-2">
-                  Email Address <span className="text-red-500">*</span>
+                  {t('requestProject.form.email')} <span className="text-red-500">*</span>
                 </label>
                 <input
                   type="email"
@@ -221,7 +222,7 @@ const RequestProject = () => {
                   onChange={handleChange}
                   disabled={isLoading}
                   className={inputClass('email')}
-                  placeholder="john@company.com"
+                  placeholder={t('requestProject.form.placeholderEmail')}
                 />
                 {errors.email && <p className="mt-1 text-sm text-red-500">{errors.email}</p>}
               </div>
@@ -231,7 +232,7 @@ const RequestProject = () => {
               {/* Company */}
               <div>
                 <label htmlFor="company" className="block text-sm font-medium text-secondary-700 mb-2">
-                  Company <span className="text-gray-400 font-normal">(optional)</span>
+                  {t('requestProject.form.company')} <span className="text-gray-400 font-normal">{t('requestProject.form.companyOptional')}</span>
                 </label>
                 <input
                   type="text"
@@ -241,14 +242,14 @@ const RequestProject = () => {
                   onChange={handleChange}
                   disabled={isLoading}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-colors duration-300 disabled:bg-gray-100 disabled:cursor-not-allowed"
-                  placeholder="Your Company Inc."
+                  placeholder={t('requestProject.form.placeholderCompany')}
                 />
               </div>
 
               {/* Project Type */}
               <div>
                 <label htmlFor="projectType" className="block text-sm font-medium text-secondary-700 mb-2">
-                  Project Type <span className="text-red-500">*</span>
+                  {t('requestProject.form.projectType')} <span className="text-red-500">*</span>
                 </label>
                 <select
                   id="projectType"
@@ -258,7 +259,7 @@ const RequestProject = () => {
                   disabled={isLoading}
                   className={`${inputClass('projectType')} appearance-none bg-white`}
                 >
-                  <option value="">Select project type...</option>
+                  <option value="">{t('requestProject.form.selectProjectType')}</option>
                   {projectTypes.map((type) => (
                     <option key={type} value={type}>{type}</option>
                   ))}
@@ -270,7 +271,7 @@ const RequestProject = () => {
             {/* Description */}
             <div className="mb-6">
               <label htmlFor="description" className="block text-sm font-medium text-secondary-700 mb-2">
-                Project Description <span className="text-red-500">*</span>
+                {t('requestProject.form.projectDescription')} <span className="text-red-500">*</span>
               </label>
               <textarea
                 id="description"
@@ -280,7 +281,7 @@ const RequestProject = () => {
                 rows={6}
                 disabled={isLoading}
                 className={`${inputClass('description')} resize-vertical`}
-                placeholder="Describe the problem you're solving, the features you need, who the users are, and any technical requirements or preferences..."
+                placeholder={t('requestProject.form.placeholderDescription')}
               />
               {errors.description && <p className="mt-1 text-sm text-red-500">{errors.description}</p>}
             </div>
@@ -288,7 +289,7 @@ const RequestProject = () => {
             {/* Budget */}
             <div className="mb-8">
               <label htmlFor="budget" className="block text-sm font-medium text-secondary-700 mb-2">
-                Budget Range <span className="text-red-500">*</span>
+                {t('requestProject.form.budgetRange')} <span className="text-red-500">*</span>
               </label>
               <select
                 id="budget"
@@ -298,7 +299,7 @@ const RequestProject = () => {
                 disabled={isLoading}
                 className={`${inputClass('budget')} appearance-none bg-white`}
               >
-                <option value="">Select budget range...</option>
+                <option value="">{t('requestProject.form.selectBudget')}</option>
                 {budgetRanges.map((range) => (
                   <option key={range} value={range}>{range}</option>
                 ))}
@@ -318,14 +319,14 @@ const RequestProject = () => {
                 {isLoading ? (
                   <span className="flex items-center justify-center">
                     <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2" />
-                    Submitting...
+                    {t('requestProject.form.submitting')}
                   </span>
                 ) : (
-                  'Submit Project Request'
+                  t('requestProject.form.submit')
                 )}
               </motion.button>
               <p className="text-sm text-gray-400 mt-4">
-                * Required fields. We'll review and respond within 24 hours.
+                {t('requestProject.form.requiredNote')}
               </p>
             </div>
           </form>

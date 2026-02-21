@@ -1,0 +1,257 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "howItWorks": "How It Works",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "team": "Team",
+    "contact": "Contact",
+    "requestProject": "Request a Project"
+  },
+  "hero": {
+    "badge": "Custom SaaS Development Studio",
+    "headline": "We Build the",
+    "headlineHighlight": "SaaS You Need.",
+    "subheadline": "TKH TECH Inc. is your on-demand software group. Tell us your idea — we scope, design, and ship production-ready SaaS products tailored exactly to your business needs.",
+    "ctaRequest": "Request a Project",
+    "ctaWork": "See Our Work",
+    "stats": {
+      "productsShipped": "Products Shipped",
+      "customBuilt": "Custom Built",
+      "saasDevelopment": "SaaS Development"
+    },
+    "statNumbers": {
+      "productsShipped": "4",
+      "customBuilt": "100%",
+      "saasDevelopment": "On-Demand"
+    }
+  },
+  "about": {
+    "subtitle": "About TKH TECH Inc.",
+    "heading": "Your On-Demand Software Group",
+    "description": "We are a specialized software group that builds tailored SaaS products based on exactly what clients need — nothing more, nothing less.",
+    "missionTitle": "We don't sell software. We build yours.",
+    "missionP1": "TKH TECH Inc. is a Montreal-based software group with a singular mission: to help businesses bring their software ideas to life. We specialize in building custom SaaS applications on demand, designed around each client's unique workflow, industry, and growth goals.",
+    "missionP2": "Our approach is straightforward — you come to us with a problem or an idea, we scope it, design it, and deliver a production-grade product. No cookie-cutter solutions. No unnecessary complexity. Just focused, high-quality software that works exactly the way your business needs it to.",
+    "pillars": {
+      "demandDriven": {
+        "title": "Demand-Driven",
+        "description": "We only build what you actually need — no bloat, no one-size-fits-all templates."
+      },
+      "fastExecution": {
+        "title": "Fast Execution",
+        "description": "From scoping call to production-ready MVP, we move with speed and precision."
+      },
+      "productionQuality": {
+        "title": "Production Quality",
+        "description": "Every product we ship is built to scale — secure, tested, and maintainable."
+      },
+      "clientPartnership": {
+        "title": "Client Partnership",
+        "description": "You're involved at every step. We build with you, not just for you."
+      }
+    },
+    "principles": [
+      "We translate complex business requirements into elegant software solutions",
+      "Every product is custom-architected for your specific use case and growth trajectory",
+      "We leverage cloud-native infrastructure so your SaaS scales from day one",
+      "Transparent communication and iterative delivery keep you in control throughout"
+    ]
+  },
+  "howItWorks": {
+    "subtitle": "The Process",
+    "heading": "How It Works",
+    "description": "From your initial idea to a live product — here's how we work together to build your SaaS.",
+    "steps": {
+      "step1": {
+        "title": "Submit Your Idea",
+        "description": "Tell us about your project using our request form. Describe the problem you're solving, your target users, and any specific requirements. No technical jargon needed — just your vision.",
+        "details": ["Fill out the project request form", "Describe your business problem", "Share your timeline and budget range"]
+      },
+      "step2": {
+        "title": "We Scope & Design",
+        "description": "Our team analyzes your requirements and schedules a discovery call. We define the product scope, create wireframes, architect the technical solution, and provide a clear project proposal.",
+        "details": ["Discovery call & requirements gathering", "Technical architecture planning", "UI/UX wireframes & prototypes"]
+      },
+      "step3": {
+        "title": "We Build & Deliver",
+        "description": "We develop your product in iterative sprints with regular demos and feedback sessions. You stay informed throughout. At the end, we hand off a fully tested, production-ready SaaS product.",
+        "details": ["Agile sprint-based development", "Regular demos & feedback loops", "Production deployment & handoff"]
+      }
+    },
+    "ctaTitle": "Ready to get started?",
+    "ctaDescription": "The first step is simple — tell us about your project. We'll take it from there.",
+    "ctaButton": "Submit Your Project Idea"
+  },
+  "services": {
+    "subtitle": "What We Do",
+    "heading": "Services Built Around Your Needs",
+    "description": "From idea to production — we offer every service you need to build, launch, and grow your SaaS product.",
+    "items": {
+      "customSaaS": {
+        "title": "Custom SaaS Development",
+        "description": "We architect and build fully custom SaaS applications from the ground up. Every line of code is written for your specific use case — no templates, no shortcuts. We handle full-stack development: backend APIs, databases, cloud infrastructure, and web or mobile frontends.",
+        "highlights": ["Full-stack architecture", "Cloud-native infrastructure", "Scalable from day one"]
+      },
+      "mvp": {
+        "title": "MVP Prototyping",
+        "description": "Got an idea but need to validate it fast? We build focused MVPs that get you to market quickly. We strip down to the essential features, ship a working product, and help you gather real user feedback before you invest in the full build.",
+        "highlights": ["Rapid 4–8 week delivery", "Core feature focus", "Investor-ready presentation"]
+      },
+      "productDesign": {
+        "title": "Product Design",
+        "description": "Great software starts with great design. Our design process covers user research, wireframing, UI design, and interactive prototyping. We create interfaces that users love — intuitive, accessible, and aligned with your brand.",
+        "highlights": ["UX research & wireframing", "High-fidelity UI design", "Interactive prototypes"]
+      },
+      "support": {
+        "title": "Ongoing Support & Maintenance",
+        "description": "Shipping is just the beginning. We provide ongoing support, bug fixes, performance monitoring, and feature development as your product evolves. Think of us as your long-term engineering partner.",
+        "highlights": ["Bug fixes & monitoring", "Feature iterations", "Performance optimization"]
+      }
+    }
+  },
+  "portfolio": {
+    "subtitle": "Our Work",
+    "heading": "Products We've Shipped",
+    "description": "Four production SaaS products built on-demand for real business needs — each one a complete, scalable, and user-tested solution.",
+    "projects": {
+      "liveit": {
+        "title": "LiveIt — Event Management App",
+        "description": "A native mobile app that lets users discover, create, and manage local events in real time. LiveIt connects event organizers with attendees, offering ticketing, RSVP management, push notifications, and live event updates — all in a sleek, consumer-grade experience.",
+        "category": "Native Mobile App"
+      },
+      "medconnect": {
+        "title": "MedConnect — Telemedicine Platform",
+        "description": "A HIPAA-compliant telemedicine SaaS connecting patients with healthcare providers through secure video consultations, electronic prescriptions, and medical record management. Built to serve clinics and independent practitioners with a complete digital health workflow.",
+        "category": "Healthcare SaaS"
+      },
+      "educore": {
+        "title": "EduCore — School Management SaaS",
+        "description": "A comprehensive school administration platform covering student enrollment, attendance tracking, grade management, parent communication, and fee collection. EduCore is built to streamline operations for schools of all sizes, from small private institutions to large networks.",
+        "category": "Education SaaS"
+      },
+      "securepay": {
+        "title": "SecurePay — C2C Payment Security App",
+        "description": "A secure consumer-to-consumer payment platform that adds a trust and verification layer to peer-to-peer transactions. SecurePay uses escrow logic, identity verification, and fraud detection algorithms to protect both buyers and sellers in marketplace transactions.",
+        "category": "FinTech SaaS"
+      }
+    },
+    "learnMore": "Learn More",
+    "ctaText": "Ready to add your product to this list?",
+    "ctaButton": "Request Your Project"
+  },
+  "requestProject": {
+    "subtitle": "Get Started",
+    "heading": "Request a Project",
+    "description": "Tell us about your idea. We'll review your submission and get back to you within 24 hours to schedule a discovery call.",
+    "form": {
+      "fullName": "Full Name",
+      "email": "Email Address",
+      "company": "Company",
+      "companyOptional": "(optional)",
+      "projectType": "Project Type",
+      "projectDescription": "Project Description",
+      "budgetRange": "Budget Range",
+      "placeholderName": "John Smith",
+      "placeholderEmail": "john@company.com",
+      "placeholderCompany": "Your Company Inc.",
+      "selectProjectType": "Select project type...",
+      "placeholderDescription": "Describe the problem you're solving, the features you need, who the users are, and any technical requirements or preferences...",
+      "selectBudget": "Select budget range...",
+      "submit": "Submit Project Request",
+      "submitting": "Submitting...",
+      "requiredNote": "* Required fields. We'll review and respond within 24 hours."
+    },
+    "projectTypes": ["SaaS App", "MVP Prototype", "Consultation", "Product Design Only", "Other"],
+    "budgetRanges": ["Under $5,000", "$5,000 – $15,000", "$15,000 – $30,000", "$30,000 – $60,000", "$60,000+", "Not sure yet"],
+    "validation": {
+      "fullNameRequired": "Full name is required",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Enter a valid email address",
+      "projectTypeRequired": "Please select a project type",
+      "descriptionRequired": "Please describe your project",
+      "descriptionMinLength": "Description should be at least 20 characters",
+      "budgetRequired": "Please select a budget range"
+    },
+    "status": {
+      "submitting": "Submitting your project request...",
+      "success": "Your project request has been submitted! We'll be in touch within 24 hours.",
+      "error": "Something went wrong. Please try again.",
+      "networkError": "Network error. Please check your connection and try again."
+    }
+  },
+  "contact": {
+    "subtitle": "Contact",
+    "heading": "Have a Question?",
+    "description": "Have a question? We'd love to hear from you. Send us a message and we'll respond as soon as possible.",
+    "info": {
+      "address": "Address",
+      "callUs": "Call Us",
+      "emailUs": "Email Us"
+    },
+    "projectCta": {
+      "title": "Want to start a project?",
+      "description": "For project requests, use our dedicated form with detailed fields to help us understand your needs better.",
+      "link": "Submit a Project Request →"
+    },
+    "form": {
+      "yourName": "Your Name",
+      "yourEmail": "Your Email",
+      "message": "Message",
+      "placeholderName": "Your full name",
+      "placeholderEmail": "your@email.com",
+      "placeholderMessage": "How can we help you?",
+      "sendMessage": "Send Message",
+      "sending": "Sending..."
+    },
+    "status": {
+      "sending": "Sending your message...",
+      "success": "Message sent! We'll get back to you within 24 hours.",
+      "error": "Something went wrong. Please try again or contact us directly.",
+      "networkError": "Network error. Please check your connection and try again."
+    }
+  },
+  "team": {
+    "subtitle": "Our Team",
+    "heading": "Meet the TKH TECH Team",
+    "description": "A passionate team of mobile development experts dedicated to creating exceptional native applications",
+    "members": {
+      "harold": {
+        "role": "CEO & Founder",
+        "description": "Visionary leader with expertise in mobile strategy and business development."
+      },
+      "ethan": {
+        "role": "Senior Mobile Developer",
+        "description": "Expert in native iOS and Android development with 5+ years of experience."
+      },
+      "staelens": {
+        "role": "Mobile Developer",
+        "description": "Passionate developer specializing in modern mobile frameworks and cloud integration."
+      }
+    }
+  },
+  "footer": {
+    "ctaTitle": "Ready to build your SaaS?",
+    "ctaDescription": "Submit your project idea and we'll get back to you within 24 hours.",
+    "ctaButton": "Request a Project",
+    "tagline": "Your on-demand software group. We build the SaaS you need — custom, fast, and production-ready.",
+    "quickLinks": "Quick Links",
+    "ourServices": "Our Services",
+    "followUs": "Follow Us",
+    "followDescription": "Stay connected with TKH TECH for the latest in SaaS development and tech innovation.",
+    "copyright": "All Rights Reserved",
+    "builtBy": "Built by TKH TECH Inc.",
+    "services": {
+      "customSaaS": "Custom SaaS Development",
+      "mvp": "MVP Prototyping",
+      "productDesign": "Product Design",
+      "support": "Ongoing Support"
+    }
+  },
+  "meta": {
+    "title": "TKH TECH Inc. - Innovative Software Development Solutions",
+    "description": "TKH TECH Inc. delivers cutting-edge software development services, from web applications to mobile apps and enterprise solutions. Transform your ideas into powerful digital experiences.",
+    "keywords": "software development, web development, mobile apps, enterprise software, cloud solutions, API development, React, Node.js, Python, TKH TECH"
+  }
+}

@@ -1,38 +1,19 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { useTranslation } from 'react-i18next';
 import { LightBulbIcon, PencilSquareIcon, RocketLaunchIcon } from '@heroicons/react/24/outline';
 
 const HowItWorks = () => {
+  const { t } = useTranslation();
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
 
   const steps = [
-    {
-      number: '01',
-      icon: LightBulbIcon,
-      title: 'Submit Your Idea',
-      description:
-        "Tell us about your project using our request form. Describe the problem you're solving, your target users, and any specific requirements. No technical jargon needed — just your vision.",
-      details: ['Fill out the project request form', 'Describe your business problem', "Share your timeline and budget range"],
-    },
-    {
-      number: '02',
-      icon: PencilSquareIcon,
-      title: 'We Scope & Design',
-      description:
-        "Our team analyzes your requirements and schedules a discovery call. We define the product scope, create wireframes, architect the technical solution, and provide a clear project proposal.",
-      details: ['Discovery call & requirements gathering', 'Technical architecture planning', 'UI/UX wireframes & prototypes'],
-    },
-    {
-      number: '03',
-      icon: RocketLaunchIcon,
-      title: 'We Build & Deliver',
-      description:
-        "We develop your product in iterative sprints with regular demos and feedback sessions. You stay informed throughout. At the end, we hand off a fully tested, production-ready SaaS product.",
-      details: ['Agile sprint-based development', 'Regular demos & feedback loops', 'Production deployment & handoff'],
-    },
+    { number: '01', icon: LightBulbIcon, key: 'step1' },
+    { number: '02', icon: PencilSquareIcon, key: 'step2' },
+    { number: '03', icon: RocketLaunchIcon, key: 'step3' },
   ];
 
   return (
@@ -45,10 +26,10 @@ const HowItWorks = () => {
           transition={{ duration: 0.8 }}
           className="section-title"
         >
-          <span className="section-subtitle">The Process</span>
-          <h2 className="section-heading">How It Works</h2>
+          <span className="section-subtitle">{t('howItWorks.subtitle')}</span>
+          <h2 className="section-heading">{t('howItWorks.heading')}</h2>
           <p className="section-description">
-            From your initial idea to a live product — here's how we work together to build your SaaS.
+            {t('howItWorks.description')}
           </p>
         </motion.div>
 
@@ -82,16 +63,16 @@ const HowItWorks = () => {
                   </div>
 
                   <h3 className="text-xl font-bold text-secondary-800 mb-4">
-                    {step.title}
+                    {t(`howItWorks.steps.${step.key}.title`)}
                   </h3>
 
                   <p className="text-secondary-600 leading-relaxed mb-6 max-w-xs">
-                    {step.description}
+                    {t(`howItWorks.steps.${step.key}.description`)}
                   </p>
 
                   {/* Detail bullets */}
                   <ul className="space-y-2 text-left w-full max-w-xs">
-                    {step.details.map((detail) => (
+                    {(t(`howItWorks.steps.${step.key}.details`, { returnObjects: true }) as string[]).map((detail) => (
                       <li key={detail} className="flex items-center text-sm text-secondary-600">
                         <span className="w-1.5 h-1.5 bg-orange-500 rounded-full mr-3 flex-shrink-0" />
                         {detail}
@@ -112,13 +93,13 @@ const HowItWorks = () => {
           className="text-center mt-16 p-10 bg-white rounded-3xl shadow-sm border border-gray-100"
         >
           <h3 className="text-2xl font-bold text-secondary-800 mb-4">
-            Ready to get started?
+            {t('howItWorks.ctaTitle')}
           </h3>
           <p className="text-secondary-600 mb-8 max-w-xl mx-auto">
-            The first step is simple — tell us about your project. We'll take it from there.
+            {t('howItWorks.ctaDescription')}
           </p>
           <a href="#request-project" className="btn-primary text-lg px-8 py-4">
-            Submit Your Project Idea
+            {t('howItWorks.ctaButton')}
           </a>
         </motion.div>
       </div>

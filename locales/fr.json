@@ -1,0 +1,257 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "howItWorks": "Comment ça marche",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "team": "Équipe",
+    "contact": "Contact",
+    "requestProject": "Demander un projet"
+  },
+  "hero": {
+    "badge": "Studio de développement SaaS sur mesure",
+    "headline": "Nous créons le",
+    "headlineHighlight": "SaaS dont vous avez besoin.",
+    "subheadline": "TKH TECH Inc. est votre groupe logiciel à la demande. Partagez-nous votre idée — nous définissons le périmètre, concevons et livrons des produits SaaS prêts pour la production, adaptés exactement aux besoins de votre entreprise.",
+    "ctaRequest": "Demander un projet",
+    "ctaWork": "Voir nos réalisations",
+    "stats": {
+      "productsShipped": "Produits livrés",
+      "customBuilt": "Sur mesure",
+      "saasDevelopment": "Développement SaaS à la demande"
+    },
+    "statNumbers": {
+      "productsShipped": "4",
+      "customBuilt": "100%",
+      "saasDevelopment": "À la demande"
+    }
+  },
+  "about": {
+    "subtitle": "À propos de TKH TECH Inc.",
+    "heading": "Votre groupe logiciel à la demande",
+    "description": "Nous sommes un groupe logiciel spécialisé qui construit des produits SaaS sur mesure en fonction exactement de ce dont les clients ont besoin — ni plus, ni moins.",
+    "missionTitle": "Nous ne vendons pas de logiciels. Nous construisons les vôtres.",
+    "missionP1": "TKH TECH Inc. est un groupe logiciel basé à Montréal avec une mission unique : aider les entreprises à donner vie à leurs idées logicielles. Nous nous spécialisons dans la création d'applications SaaS sur mesure à la demande, conçues autour du flux de travail, de l'industrie et des objectifs de croissance de chaque client.",
+    "missionP2": "Notre approche est simple — vous venez à nous avec un problème ou une idée, nous définissons le périmètre, concevons et livrons un produit de qualité production. Pas de solutions toutes faites. Pas de complexité inutile. Juste un logiciel ciblé et de haute qualité qui fonctionne exactement comme votre entreprise en a besoin.",
+    "pillars": {
+      "demandDriven": {
+        "title": "Axé sur la demande",
+        "description": "Nous ne construisons que ce dont vous avez réellement besoin — pas de superflu, pas de modèles universels."
+      },
+      "fastExecution": {
+        "title": "Exécution rapide",
+        "description": "De l'appel de cadrage au MVP prêt pour la production, nous avançons avec rapidité et précision."
+      },
+      "productionQuality": {
+        "title": "Qualité production",
+        "description": "Chaque produit que nous livrons est conçu pour évoluer — sécurisé, testé et maintenable."
+      },
+      "clientPartnership": {
+        "title": "Partenariat client",
+        "description": "Vous êtes impliqué à chaque étape. Nous construisons avec vous, pas seulement pour vous."
+      }
+    },
+    "principles": [
+      "Nous transformons les exigences métier complexes en solutions logicielles élégantes",
+      "Chaque produit est conçu sur mesure pour votre cas d'usage et votre trajectoire de croissance",
+      "Nous exploitons une infrastructure cloud-native pour que votre SaaS évolue dès le premier jour",
+      "Une communication transparente et une livraison itérative vous gardent maître du processus"
+    ]
+  },
+  "howItWorks": {
+    "subtitle": "Le processus",
+    "heading": "Comment ça marche",
+    "description": "De votre idée initiale à un produit en ligne — voici comment nous travaillons ensemble pour construire votre SaaS.",
+    "steps": {
+      "step1": {
+        "title": "Soumettez votre idée",
+        "description": "Parlez-nous de votre projet via notre formulaire de demande. Décrivez le problème que vous résolvez, vos utilisateurs cibles et toute exigence spécifique. Pas besoin de jargon technique — juste votre vision.",
+        "details": ["Remplissez le formulaire de demande de projet", "Décrivez votre problème métier", "Partagez votre calendrier et fourchette budgétaire"]
+      },
+      "step2": {
+        "title": "Nous cadrons et concevons",
+        "description": "Notre équipe analyse vos exigences et planifie un appel de découverte. Nous définissons le périmètre du produit, créons des maquettes, concevons la solution technique et fournissons une proposition de projet claire.",
+        "details": ["Appel de découverte et collecte des exigences", "Planification de l'architecture technique", "Maquettes et prototypes UI/UX"]
+      },
+      "step3": {
+        "title": "Nous construisons et livrons",
+        "description": "Nous développons votre produit en sprints itératifs avec des démos régulières et des sessions de feedback. Vous restez informé tout au long. À la fin, nous remettons un produit SaaS entièrement testé et prêt pour la production.",
+        "details": ["Développement agile par sprints", "Démos et boucles de feedback régulières", "Déploiement et remise en production"]
+      }
+    },
+    "ctaTitle": "Prêt à commencer ?",
+    "ctaDescription": "La première étape est simple — parlez-nous de votre projet. Nous prenons le relais.",
+    "ctaButton": "Soumettre votre idée de projet"
+  },
+  "services": {
+    "subtitle": "Ce que nous faisons",
+    "heading": "Des services adaptés à vos besoins",
+    "description": "De l'idée à la production — nous offrons tous les services dont vous avez besoin pour construire, lancer et faire croître votre produit SaaS.",
+    "items": {
+      "customSaaS": {
+        "title": "Développement SaaS sur mesure",
+        "description": "Nous concevons et construisons des applications SaaS entièrement personnalisées de A à Z. Chaque ligne de code est écrite pour votre cas d'usage spécifique — pas de modèles, pas de raccourcis. Nous gérons le développement full-stack : APIs backend, bases de données, infrastructure cloud et frontends web ou mobiles.",
+        "highlights": ["Architecture full-stack", "Infrastructure cloud-native", "Évolutif dès le premier jour"]
+      },
+      "mvp": {
+        "title": "Prototypage MVP",
+        "description": "Vous avez une idée mais besoin de la valider rapidement ? Nous construisons des MVP ciblés qui vous amènent sur le marché rapidement. Nous nous concentrons sur les fonctionnalités essentielles, livrons un produit fonctionnel et vous aidons à recueillir des retours utilisateurs réels avant d'investir dans la version complète.",
+        "highlights": ["Livraison rapide en 4–8 semaines", "Focus sur les fonctionnalités clés", "Présentation prête pour investisseurs"]
+      },
+      "productDesign": {
+        "title": "Conception de produit",
+        "description": "Un bon logiciel commence par une bonne conception. Notre processus de design couvre la recherche utilisateur, le wireframing, la conception UI et le prototypage interactif. Nous créons des interfaces que les utilisateurs adorent — intuitives, accessibles et alignées avec votre marque.",
+        "highlights": ["Recherche UX et wireframing", "Conception UI haute fidélité", "Prototypes interactifs"]
+      },
+      "support": {
+        "title": "Support et maintenance continus",
+        "description": "La livraison n'est que le début. Nous fournissons un support continu, des corrections de bugs, une surveillance des performances et le développement de fonctionnalités au fur et à mesure que votre produit évolue. Considérez-nous comme votre partenaire technique à long terme.",
+        "highlights": ["Corrections de bugs et surveillance", "Itérations de fonctionnalités", "Optimisation des performances"]
+      }
+    }
+  },
+  "portfolio": {
+    "subtitle": "Nos réalisations",
+    "heading": "Produits que nous avons livrés",
+    "description": "Quatre produits SaaS en production construits à la demande pour de vrais besoins métier — chacun une solution complète, évolutive et testée par les utilisateurs.",
+    "projects": {
+      "liveit": {
+        "title": "LiveIt — Application de gestion d'événements",
+        "description": "Une application mobile native qui permet aux utilisateurs de découvrir, créer et gérer des événements locaux en temps réel. LiveIt connecte les organisateurs d'événements aux participants, offrant la billetterie, la gestion des RSVP, les notifications push et les mises à jour en direct — le tout dans une expérience consommateur élégante.",
+        "category": "Application mobile native"
+      },
+      "medconnect": {
+        "title": "MedConnect — Plateforme de télémédecine",
+        "description": "Un SaaS de télémédecine conforme HIPAA reliant les patients aux professionnels de santé via des consultations vidéo sécurisées, des ordonnances électroniques et la gestion des dossiers médicaux. Conçu pour servir les cliniques et les praticiens indépendants avec un flux de travail de santé numérique complet.",
+        "category": "SaaS santé"
+      },
+      "educore": {
+        "title": "EduCore — SaaS de gestion scolaire",
+        "description": "Une plateforme complète d'administration scolaire couvrant l'inscription des élèves, le suivi des présences, la gestion des notes, la communication avec les parents et la collecte des frais. EduCore est conçu pour rationaliser les opérations des établissements de toutes tailles, des petites institutions privées aux grands réseaux.",
+        "category": "SaaS éducation"
+      },
+      "securepay": {
+        "title": "SecurePay — Application de sécurité des paiements C2C",
+        "description": "Une plateforme de paiement sécurisée entre consommateurs qui ajoute une couche de confiance et de vérification aux transactions peer-to-peer. SecurePay utilise une logique d'escrow, la vérification d'identité et des algorithmes de détection de fraude pour protéger acheteurs et vendeurs dans les transactions de marché.",
+        "category": "SaaS FinTech"
+      }
+    },
+    "learnMore": "En savoir plus",
+    "ctaText": "Prêt à ajouter votre produit à cette liste ?",
+    "ctaButton": "Demander votre projet"
+  },
+  "requestProject": {
+    "subtitle": "Commencer",
+    "heading": "Demander un projet",
+    "description": "Parlez-nous de votre idée. Nous examinerons votre demande et vous répondrons sous 24 heures pour planifier un appel de découverte.",
+    "form": {
+      "fullName": "Nom complet",
+      "email": "Adresse courriel",
+      "company": "Entreprise",
+      "companyOptional": "(optionnel)",
+      "projectType": "Type de projet",
+      "projectDescription": "Description du projet",
+      "budgetRange": "Fourchette budgétaire",
+      "placeholderName": "Jean Dupont",
+      "placeholderEmail": "jean@entreprise.com",
+      "placeholderCompany": "Votre entreprise Inc.",
+      "selectProjectType": "Sélectionner le type de projet...",
+      "placeholderDescription": "Décrivez le problème que vous résolvez, les fonctionnalités dont vous avez besoin, qui sont les utilisateurs, et toute exigence ou préférence technique...",
+      "selectBudget": "Sélectionner la fourchette budgétaire...",
+      "submit": "Soumettre la demande de projet",
+      "submitting": "Envoi en cours...",
+      "requiredNote": "* Champs obligatoires. Nous examinerons et répondrons sous 24 heures."
+    },
+    "projectTypes": ["Application SaaS", "Prototype MVP", "Consultation", "Conception de produit uniquement", "Autre"],
+    "budgetRanges": ["Moins de 5 000 $", "5 000 $ – 15 000 $", "15 000 $ – 30 000 $", "30 000 $ – 60 000 $", "60 000 $ et plus", "Pas encore sûr"],
+    "validation": {
+      "fullNameRequired": "Le nom complet est requis",
+      "emailRequired": "L'adresse courriel est requise",
+      "emailInvalid": "Entrez une adresse courriel valide",
+      "projectTypeRequired": "Veuillez sélectionner un type de projet",
+      "descriptionRequired": "Veuillez décrire votre projet",
+      "descriptionMinLength": "La description doit contenir au moins 20 caractères",
+      "budgetRequired": "Veuillez sélectionner une fourchette budgétaire"
+    },
+    "status": {
+      "submitting": "Envoi de votre demande de projet...",
+      "success": "Votre demande de projet a été soumise ! Nous vous contacterons sous 24 heures.",
+      "error": "Une erreur s'est produite. Veuillez réessayer.",
+      "networkError": "Erreur réseau. Veuillez vérifier votre connexion et réessayer."
+    }
+  },
+  "contact": {
+    "subtitle": "Contact",
+    "heading": "Une question ?",
+    "description": "Une question ? Nous serions ravis de vous entendre. Envoyez-nous un message et nous répondrons dès que possible.",
+    "info": {
+      "address": "Adresse",
+      "callUs": "Appelez-nous",
+      "emailUs": "Écrivez-nous"
+    },
+    "projectCta": {
+      "title": "Vous voulez démarrer un projet ?",
+      "description": "Pour les demandes de projet, utilisez notre formulaire dédié avec des champs détaillés pour nous aider à mieux comprendre vos besoins.",
+      "link": "Soumettre une demande de projet →"
+    },
+    "form": {
+      "yourName": "Votre nom",
+      "yourEmail": "Votre courriel",
+      "message": "Message",
+      "placeholderName": "Votre nom complet",
+      "placeholderEmail": "votre@courriel.com",
+      "placeholderMessage": "Comment pouvons-nous vous aider ?",
+      "sendMessage": "Envoyer le message",
+      "sending": "Envoi en cours..."
+    },
+    "status": {
+      "sending": "Envoi de votre message...",
+      "success": "Message envoyé ! Nous vous répondrons sous 24 heures.",
+      "error": "Une erreur s'est produite. Veuillez réessayer ou nous contacter directement.",
+      "networkError": "Erreur réseau. Veuillez vérifier votre connexion et réessayer."
+    }
+  },
+  "team": {
+    "subtitle": "Notre équipe",
+    "heading": "Rencontrez l'équipe TKH TECH",
+    "description": "Une équipe passionnée d'experts en développement mobile dédiée à créer des applications natives exceptionnelles",
+    "members": {
+      "harold": {
+        "role": "PDG et fondateur",
+        "description": "Leader visionnaire avec une expertise en stratégie mobile et développement commercial."
+      },
+      "ethan": {
+        "role": "Développeur mobile senior",
+        "description": "Expert en développement natif iOS et Android avec plus de 5 ans d'expérience."
+      },
+      "staelens": {
+        "role": "Développeur mobile",
+        "description": "Développeur passionné spécialisé dans les frameworks mobiles modernes et l'intégration cloud."
+      }
+    }
+  },
+  "footer": {
+    "ctaTitle": "Prêt à construire votre SaaS ?",
+    "ctaDescription": "Soumettez votre idée de projet et nous vous répondrons sous 24 heures.",
+    "ctaButton": "Demander un projet",
+    "tagline": "Votre groupe logiciel à la demande. Nous construisons le SaaS dont vous avez besoin — sur mesure, rapide et prêt pour la production.",
+    "quickLinks": "Liens rapides",
+    "ourServices": "Nos services",
+    "followUs": "Suivez-nous",
+    "followDescription": "Restez connecté avec TKH TECH pour les dernières nouveautés en développement SaaS et innovation technologique.",
+    "copyright": "Tous droits réservés",
+    "builtBy": "Conçu par TKH TECH Inc.",
+    "services": {
+      "customSaaS": "Développement SaaS sur mesure",
+      "mvp": "Prototypage MVP",
+      "productDesign": "Conception de produit",
+      "support": "Support continu"
+    }
+  },
+  "meta": {
+    "title": "TKH TECH Inc. - Solutions innovantes en développement logiciel",
+    "description": "TKH TECH Inc. offre des services de développement logiciel de pointe, des applications web aux applications mobiles et solutions d'entreprise. Transformez vos idées en expériences numériques puissantes.",
+    "keywords": "développement logiciel, développement web, applications mobiles, logiciel d'entreprise, solutions cloud, développement API, React, Node.js, Python, TKH TECH"
+  }
+}

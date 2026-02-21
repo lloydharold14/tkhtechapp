@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { useTranslation } from 'react-i18next';
 import { MapPinIcon, PhoneIcon, EnvelopeIcon, CheckCircleIcon, ExclamationTriangleIcon } from '@heroicons/react/24/outline';
 import { contactConfig, formatContactRequest } from '@/config/contact';
 
 const Contact = () => {
+  const { t } = useTranslation();
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -28,7 +30,7 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setFormStatus({ type: 'loading', message: 'Sending your message...' });
+    setFormStatus({ type: 'loading', message: t('contact.status.sending') });
 
     try {
       const payload = formatContactRequest({
@@ -53,30 +55,30 @@ const Contact = () => {
       }
 
       if (response.ok && result.success !== false) {
-        setFormStatus({ type: 'success', message: "Message sent! We'll get back to you within 24 hours." });
+        setFormStatus({ type: 'success', message: t('contact.status.success') });
         setFormData({ name: '', email: '', message: '' });
       } else {
-        setFormStatus({ type: 'error', message: result.message || contactConfig.messages.error });
+        setFormStatus({ type: 'error', message: result.message || t('contact.status.error') });
       }
     } catch {
-      setFormStatus({ type: 'error', message: contactConfig.messages.networkError });
+      setFormStatus({ type: 'error', message: t('contact.status.networkError') });
     }
   };
 
   const contactInfo = [
     {
       icon: MapPinIcon,
-      title: 'Address',
+      titleKey: 'address',
       details: ['TKH TECH Inc.', '777 Boulevard Le Corbusier', 'Montreal, QC, Canada'],
     },
     {
       icon: PhoneIcon,
-      title: 'Call Us',
+      titleKey: 'callUs',
       details: ['+1 (438) 887-1040'],
     },
     {
       icon: EnvelopeIcon,
-      title: 'Email Us',
+      titleKey: 'emailUs',
       details: ['info@tkhtech.com'],
     },
   ];
@@ -91,10 +93,10 @@ const Contact = () => {
           transition={{ duration: 0.8 }}
           className="section-title"
         >
-          <span className="section-subtitle">Contact</span>
-          <h2 className="section-heading">Have a Question?</h2>
+          <span className="section-subtitle">{t('contact.subtitle')}</span>
+          <h2 className="section-heading">{t('contact.heading')}</h2>
           <p className="section-description">
-            Have a question? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+            {t('contact.description')}
           </p>
         </motion.div>
 
@@ -108,7 +110,7 @@ const Contact = () => {
           >
             {contactInfo.map((info, index) => (
               <motion.div
-                key={info.title}
+                key={info.titleKey}
                 initial={{ opacity: 0, y: 30 }}
                 animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                 transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
@@ -118,7 +120,7 @@ const Contact = () => {
                   <info.icon className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-secondary-800 mb-1">{info.title}</h3>
+                  <h3 className="text-lg font-semibold text-secondary-800 mb-1">{t(`contact.info.${info.titleKey}`)}</h3>
                   {info.details.map((detail, i) => (
                     <p key={i} className="text-secondary-600">{detail}</p>
                   ))}
@@ -132,12 +134,12 @@ const Contact = () => {
               transition={{ duration: 0.6, delay: 0.6 }}
               className="mt-8 p-6 bg-orange-50 rounded-2xl border border-orange-100"
             >
-              <h4 className="font-semibold text-secondary-800 mb-2">Want to start a project?</h4>
+              <h4 className="font-semibold text-secondary-800 mb-2">{t('contact.projectCta.title')}</h4>
               <p className="text-secondary-600 text-sm mb-4">
-                For project requests, use our dedicated form with detailed fields to help us understand your needs better.
+                {t('contact.projectCta.description')}
               </p>
               <a href="#request-project" className="text-orange-500 hover:text-orange-600 font-medium text-sm transition-colors duration-300">
-                Submit a Project Request →
+                {t('contact.projectCta.link')}
               </a>
             </motion.div>
           </motion.div>
@@ -174,7 +176,7 @@ const Contact = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-secondary-700 mb-2">
-                    Your Name <span className="text-red-500">*</span>
+                    {t('contact.form.yourName')} <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="text"
@@ -185,12 +187,12 @@ const Contact = () => {
                     required
                     disabled={formStatus.type === 'loading'}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-colors duration-300 bg-white disabled:bg-gray-100 disabled:cursor-not-allowed"
-                    placeholder="Your full name"
+                    placeholder={t('contact.form.placeholderName')}
                   />
                 </div>
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-secondary-700 mb-2">
-                    Your Email <span className="text-red-500">*</span>
+                    {t('contact.form.yourEmail')} <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="email"
@@ -201,14 +203,14 @@ const Contact = () => {
                     required
                     disabled={formStatus.type === 'loading'}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-colors duration-300 bg-white disabled:bg-gray-100 disabled:cursor-not-allowed"
-                    placeholder="your@email.com"
+                    placeholder={t('contact.form.placeholderEmail')}
                   />
                 </div>
               </div>
 
               <div className="mb-6">
                 <label htmlFor="message" className="block text-sm font-medium text-secondary-700 mb-2">
-                  Message <span className="text-red-500">*</span>
+                  {t('contact.form.message')} <span className="text-red-500">*</span>
                 </label>
                 <textarea
                   id="message"
@@ -219,7 +221,7 @@ const Contact = () => {
                   required
                   disabled={formStatus.type === 'loading'}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-colors duration-300 resize-vertical bg-white disabled:bg-gray-100 disabled:cursor-not-allowed"
-                  placeholder="How can we help you?"
+                  placeholder={t('contact.form.placeholderMessage')}
                 />
               </div>
 
@@ -234,10 +236,10 @@ const Contact = () => {
                   {formStatus.type === 'loading' ? (
                     <span className="flex items-center">
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2" />
-                      Sending...
+                      {t('contact.form.sending')}
                     </span>
                   ) : (
-                    'Send Message'
+                    t('contact.form.sendMessage')
                   )}
                 </motion.button>
               </div>

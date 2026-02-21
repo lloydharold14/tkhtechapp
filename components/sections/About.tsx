@@ -1,42 +1,21 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { useTranslation } from 'react-i18next';
 import { CheckCircleIcon } from '@heroicons/react/24/solid';
 import { CpuChipIcon, BoltIcon, ShieldCheckIcon, UsersIcon } from '@heroicons/react/24/outline';
 
 const About = () => {
+  const { t } = useTranslation();
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
 
   const pillars = [
-    {
-      icon: CpuChipIcon,
-      title: 'Demand-Driven',
-      description: "We only build what you actually need — no bloat, no one-size-fits-all templates.",
-    },
-    {
-      icon: BoltIcon,
-      title: 'Fast Execution',
-      description: 'From scoping call to production-ready MVP, we move with speed and precision.',
-    },
-    {
-      icon: ShieldCheckIcon,
-      title: 'Production Quality',
-      description: 'Every product we ship is built to scale — secure, tested, and maintainable.',
-    },
-    {
-      icon: UsersIcon,
-      title: 'Client Partnership',
-      description: "You're involved at every step. We build with you, not just for you.",
-    },
-  ];
-
-  const principles = [
-    'We translate complex business requirements into elegant software solutions',
-    'Every product is custom-architected for your specific use case and growth trajectory',
-    'We leverage cloud-native infrastructure so your SaaS scales from day one',
-    'Transparent communication and iterative delivery keep you in control throughout',
+    { icon: CpuChipIcon, key: 'demandDriven' },
+    { icon: BoltIcon, key: 'fastExecution' },
+    { icon: ShieldCheckIcon, key: 'productionQuality' },
+    { icon: UsersIcon, key: 'clientPartnership' },
   ];
 
   return (
@@ -49,11 +28,10 @@ const About = () => {
           transition={{ duration: 0.8 }}
           className="section-title"
         >
-          <span className="section-subtitle">About TKH TECH Inc.</span>
-          <h2 className="section-heading">Your On-Demand Software Group</h2>
+          <span className="section-subtitle">{t('about.subtitle')}</span>
+          <h2 className="section-heading">{t('about.heading')}</h2>
           <p className="section-description">
-            We are a specialized software group that builds tailored SaaS products based on exactly what clients need — 
-            nothing more, nothing less.
+            {t('about.description')}
           </p>
         </motion.div>
 
@@ -65,23 +43,19 @@ const About = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <h3 className="text-3xl font-bold text-secondary-800 mb-6">
-              We don't sell software. We build yours.
+              {t('about.missionTitle')}
             </h3>
 
             <p className="text-lg text-secondary-600 mb-6 leading-relaxed">
-              TKH TECH Inc. is a Montreal-based software group with a singular mission: to help businesses 
-              bring their software ideas to life. We specialize in building custom SaaS applications on demand, 
-              designed around each client's unique workflow, industry, and growth goals.
+              {t('about.missionP1')}
             </p>
 
             <p className="text-secondary-600 mb-8 leading-relaxed">
-              Our approach is straightforward — you come to us with a problem or an idea, we scope it, design it, 
-              and deliver a production-grade product. No cookie-cutter solutions. No unnecessary complexity. Just 
-              focused, high-quality software that works exactly the way your business needs it to.
+              {t('about.missionP2')}
             </p>
 
             <ul className="space-y-4">
-              {principles.map((principle, index) => (
+              {(t('about.principles', { returnObjects: true }) as string[]).map((principle, index) => (
                 <motion.li
                   key={index}
                   initial={{ opacity: 0, x: 20 }}
@@ -105,7 +79,7 @@ const About = () => {
           >
             {pillars.map((pillar, index) => (
               <motion.div
-                key={pillar.title}
+                key={pillar.key}
                 initial={{ opacity: 0, y: 30 }}
                 animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                 transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
@@ -114,8 +88,8 @@ const About = () => {
                 <div className="w-12 h-12 bg-orange-500 rounded-xl flex items-center justify-center mb-4">
                   <pillar.icon className="w-6 h-6 text-white" />
                 </div>
-                <h4 className="text-lg font-bold text-secondary-800 mb-2">{pillar.title}</h4>
-                <p className="text-secondary-600 text-sm leading-relaxed">{pillar.description}</p>
+                <h4 className="text-lg font-bold text-secondary-800 mb-2">{t(`about.pillars.${pillar.key}.title`)}</h4>
+                <p className="text-secondary-600 text-sm leading-relaxed">{t(`about.pillars.${pillar.key}.description`)}</p>
               </motion.div>
             ))}
           </motion.div>

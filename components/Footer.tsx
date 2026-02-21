@@ -1,21 +1,23 @@
 import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+  const { t } = useTranslation();
   const quickLinks = [
-    { name: 'Home', href: '#hero' },
-    { name: 'About', href: '#about' },
-    { name: 'How It Works', href: '#how-it-works' },
-    { name: 'Services', href: '#services' },
-    { name: 'Portfolio', href: '#portfolio' },
-    { name: 'Team', href: '#team' },
-    { name: 'Contact', href: '#contact' },
+    { key: 'home', href: '#hero' },
+    { key: 'about', href: '#about' },
+    { key: 'howItWorks', href: '#how-it-works' },
+    { key: 'services', href: '#services' },
+    { key: 'portfolio', href: '#portfolio' },
+    { key: 'team', href: '#team' },
+    { key: 'contact', href: '#contact' },
   ];
 
   const services = [
-    { name: 'Custom SaaS Development', href: '#services' },
-    { name: 'MVP Prototyping', href: '#services' },
-    { name: 'Product Design', href: '#services' },
-    { name: 'Ongoing Support', href: '#services' },
+    { key: 'customSaaS', href: '#services' },
+    { key: 'mvp', href: '#services' },
+    { key: 'productDesign', href: '#services' },
+    { key: 'support', href: '#services' },
   ];
 
   const socialLinks = [
@@ -43,16 +45,16 @@ const Footer = () => {
         <div className="container-custom">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
-              <h4 className="text-2xl font-bold text-white mb-2">Ready to build your SaaS?</h4>
+              <h4 className="text-2xl font-bold text-white mb-2">{t('footer.ctaTitle')}</h4>
               <p className="text-orange-100">
-                Submit your project idea and we'll get back to you within 24 hours.
+                {t('footer.ctaDescription')}
               </p>
             </div>
             <Link
               href="#request-project"
               className="px-8 py-4 bg-white text-orange-500 font-bold rounded-lg hover:bg-orange-50 transition-colors duration-300 whitespace-nowrap"
             >
-              Request a Project
+              {t('footer.ctaButton')}
             </Link>
           </div>
         </div>
@@ -67,7 +69,7 @@ const Footer = () => {
               <h3 className="text-2xl font-bold gradient-text">TKH TECH</h3>
             </Link>
             <p className="text-secondary-300 text-sm mb-4 leading-relaxed">
-              Your on-demand software group. We build the SaaS you need — custom, fast, and production-ready.
+              {t('footer.tagline')}
             </p>
             <div className="space-y-1 text-secondary-300 text-sm">
               <p>777 Boulevard Le Corbusier</p>
@@ -79,16 +81,16 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">Quick Links</h4>
+            <h4 className="text-lg font-semibold mb-6">{t('footer.quickLinks')}</h4>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
-                <li key={link.name}>
+                <li key={link.key}>
                   <Link
                     href={link.href}
                     className="text-secondary-300 hover:text-primary-400 transition-colors duration-300 flex items-center text-sm"
                   >
                     <span className="mr-2">›</span>
-                    {link.name}
+                    {t(`nav.${link.key}`)}
                   </Link>
                 </li>
               ))}
@@ -97,16 +99,16 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">Our Services</h4>
+            <h4 className="text-lg font-semibold mb-6">{t('footer.ourServices')}</h4>
             <ul className="space-y-3">
               {services.map((service) => (
-                <li key={service.name}>
+                <li key={service.key}>
                   <Link
                     href={service.href}
                     className="text-secondary-300 hover:text-primary-400 transition-colors duration-300 flex items-center text-sm"
                   >
                     <span className="mr-2">›</span>
-                    {service.name}
+                    {t(`footer.services.${service.key}`)}
                   </Link>
                 </li>
               ))}
@@ -115,9 +117,9 @@ const Footer = () => {
 
           {/* Follow Us */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">Follow Us</h4>
+            <h4 className="text-lg font-semibold mb-6">{t('footer.followUs')}</h4>
             <p className="text-secondary-300 mb-6 text-sm">
-              Stay connected with TKH TECH for the latest in SaaS development and tech innovation.
+              {t('footer.followDescription')}
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
@@ -147,10 +149,10 @@ const Footer = () => {
         <div className="container-custom">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-secondary-400 text-sm text-center md:text-left">
-              © {new Date().getFullYear()} <strong className="text-white">TKH TECH Inc.</strong> All Rights Reserved
+              © {new Date().getFullYear()} <strong className="text-white">TKH TECH Inc.</strong> {t('footer.copyright')}
             </p>
             <p className="text-secondary-400 text-sm">
-              Built by TKH TECH Inc.
+              {t('footer.builtBy')}
             </p>
           </div>
         </div>

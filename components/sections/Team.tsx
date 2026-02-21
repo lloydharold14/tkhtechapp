@@ -1,47 +1,19 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 
 const Team = () => {
+  const { t } = useTranslation();
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
 
   const teamMembers = [
-    {
-      name: 'Harold Tchokponhoue',
-      role: 'CEO & Founder',
-      image: '/team/team-1.jpg',
-      description: 'Visionary leader with expertise in mobile strategy and business development.',
-      social: {
-        linkedin: '#',
-        twitter: '#',
-        github: '#',
-      }
-    },
-    {
-      name: 'Ethan Djivo',
-      role: 'Senior Mobile Developer',
-      image: '/team/team-2.jpg',
-      description: 'Expert in native iOS and Android development with 5+ years of experience.',
-      social: {
-        linkedin: '#',
-        twitter: '#',
-        github: '#',
-      }
-    },
-    {
-      name: 'Staelens Maforikan',
-      role: 'Mobile Developer',
-      image: '/team/team-3.jpg',
-      description: 'Passionate developer specializing in modern mobile frameworks and cloud integration.',
-      social: {
-        linkedin: '#',
-        twitter: '#',
-        github: '#',
-      }
-    },
+    { name: 'Harold Tchokponhoue', key: 'harold', image: '/team/team-1.jpg', social: { linkedin: '#', twitter: '#', github: '#' } },
+    { name: 'Ethan Djivo', key: 'ethan', image: '/team/team-2.jpg', social: { linkedin: '#', twitter: '#', github: '#' } },
+    { name: 'Staelens Maforikan', key: 'staelens', image: '/team/team-3.jpg', social: { linkedin: '#', twitter: '#', github: '#' } },
   ];
 
   const container = {
@@ -69,10 +41,10 @@ const Team = () => {
           transition={{ duration: 0.8 }}
           className="section-title"
         >
-          <span className="section-subtitle">Our Team</span>
-          <h2 className="section-heading">Meet the TKH TECH Team</h2>
+          <span className="section-subtitle">{t('team.subtitle')}</span>
+          <h2 className="section-heading">{t('team.heading')}</h2>
           <p className="section-description">
-            A passionate team of mobile development experts dedicated to creating exceptional native applications
+            {t('team.description')}
           </p>
         </motion.div>
 
@@ -123,10 +95,10 @@ const Team = () => {
                   {member.name}
                 </h3>
                 <p className="text-orange-500 font-medium mb-3">
-                  {member.role}
+                  {t(`team.members.${member.key}.role`)}
                 </p>
                 <p className="text-secondary-600 text-sm leading-relaxed">
-                  {member.description}
+                  {t(`team.members.${member.key}.description`)}
                 </p>
               </div>
             </motion.div>
