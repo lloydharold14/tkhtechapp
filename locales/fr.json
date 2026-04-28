@@ -114,30 +114,29 @@
   "portfolio": {
     "subtitle": "Nos réalisations",
     "heading": "Produits que nous avons livrés",
-    "description": "Quatre produits SaaS en production construits à la demande pour de vrais besoins métier — chacun une solution complète, évolutive et testée par les utilisateurs.",
+    "description": "Aperçu des produits que nous construisons et livrons pour de vrais utilisateurs — pensés pour la clarté, l’évolution et l’usage au quotidien.",
     "projects": {
+      "zuricards": {
+        "title": "ZuriCards",
+        "description": "Invitations numériques et hub invités : un lien partageable du « save the date » aux remerciements—RSVP sans fatigue d’apps, logistique et messages côté hôtes, modèles pour mariages, fêtes sur plusieurs jours et rassemblements culturels. Les infos restent à jour sur le lien plutôt que perdues dans les fils de discussion.",
+        "category": "Invitations et RSVP"
+      },
+      "kabasika": {
+        "title": "Kabasika — Kaba",
+        "description": "Comptabilité pour les PME d’Afrique de l’Ouest (produit Kaba) : facturation intelligente (y compris envoi par WhatsApp), mobile money et cartes avec rapprochement automatique, saisie de reçus avec extraction IA, stocks, grands livres et fiscalité compatibles OHADA, indicateur Trust Score basé sur vos livres, et assistant IA pour chiffre d’affaires, créances, fiscalité et trésorerie.",
+        "category": "Comptabilité et paiements PME"
+      },
+      "ileralive": {
+        "title": "IleraLive",
+        "description": "Télémédecine et prise de rendez-vous en clinique pour le Bénin et l’Afrique de l’Ouest : visites vidéo HD avec professionnels agréés, créneaux en présentiel chez les partenaires quand c’est proposé, ordonnances et bilans centralisés, protections alignées HIPAA avec journalisation des accès aux données de santé, conception respectueuse du RGPD, et paiement en devise locale (cartes, mobile money selon les pays).",
+        "category": "Télésanté et cliniques"
+      },
       "liveit": {
         "title": "LiveIt — Application de gestion d'événements",
-        "description": "Une application mobile native qui permet aux utilisateurs de découvrir, créer et gérer des événements locaux en temps réel. LiveIt connecte les organisateurs d'événements aux participants, offrant la billetterie, la gestion des RSVP, les notifications push et les mises à jour en direct — le tout dans une expérience consommateur élégante.",
-        "category": "Application mobile native"
-      },
-      "medconnect": {
-        "title": "MedConnect — Plateforme de télémédecine",
-        "description": "Un SaaS de télémédecine conforme HIPAA reliant les patients aux professionnels de santé via des consultations vidéo sécurisées, des ordonnances électroniques et la gestion des dossiers médicaux. Conçu pour servir les cliniques et les praticiens indépendants avec un flux de travail de santé numérique complet.",
-        "category": "SaaS santé"
-      },
-      "educore": {
-        "title": "EduCore — SaaS de gestion scolaire",
-        "description": "Une plateforme complète d'administration scolaire couvrant l'inscription des élèves, le suivi des présences, la gestion des notes, la communication avec les parents et la collecte des frais. EduCore est conçu pour rationaliser les opérations des établissements de toutes tailles, des petites institutions privées aux grands réseaux.",
-        "category": "SaaS éducation"
-      },
-      "securepay": {
-        "title": "SecurePay — Application de sécurité des paiements C2C",
-        "description": "Une plateforme de paiement sécurisée entre consommateurs qui ajoute une couche de confiance et de vérification aux transactions peer-to-peer. SecurePay utilise une logique d'escrow, la vérification d'identité et des algorithmes de détection de fraude pour protéger acheteurs et vendeurs dans les transactions de marché.",
-        "category": "SaaS FinTech"
+        "description": "Une expérience mobile native pour découvrir, créer et animer des événements locaux en temps réel. Organisateurs et participants restent alignés grâce à la billetterie, les RSVP, les rappels et les mises à jour en direct, dans un parcours fluide.",
+        "category": "Gestion d'événements"
       }
     },
-    "learnMore": "En savoir plus",
     "ctaText": "Prêt à ajouter votre produit à cette liste ?",
     "ctaButton": "Demander votre projet"
   },

@@ -114,30 +114,29 @@
   "portfolio": {
     "subtitle": "Our Work",
     "heading": "Products We've Shipped",
-    "description": "Four production SaaS products built on-demand for real business needs — each one a complete, scalable, and user-tested solution.",
+    "description": "A snapshot of products we build and ship for real users — scoped for clarity, scalability, and day-to-day usefulness.",
     "projects": {
+      "zuricards": {
+        "title": "ZuriCards",
+        "description": "Digital invitations and a guest-friendly event hub: one shareable link for save-the-dates through thank-yous—RSVP without app fatigue, logistics and messaging for hosts, and templates tuned for weddings, multi-day celebrations, and cultural gatherings. Built so details stay current on the link instead of scattered across chats.",
+        "category": "Invitations & RSVP"
+      },
+      "kabasika": {
+        "title": "Kabasika — Kaba",
+        "description": "Accounting for West African MSMEs under the Kaba product: smart invoicing (including WhatsApp delivery), native mobile-money and card flows with automatic reconciliation, receipt capture with AI extraction, inventory, OHADA-ready ledgers and tax, Trust Score from real books, and an AI assistant for revenue, aging, tax, and cash-flow questions.",
+        "category": "MSME accounting & payments"
+      },
+      "ileralive": {
+        "title": "IleraLive",
+        "description": "Video care and clinic booking for Benin and West Africa: HD visits with licensed providers, in-person partner slots where available, prescriptions and labs tracked in one place, HIPAA-aligned safeguards with PHI audit trails, GDPR-aware design, and checkout in local currency with cards and mobile money as enabled.",
+        "category": "Telehealth & clinics"
+      },
       "liveit": {
         "title": "LiveIt — Event Management App",
-        "description": "A native mobile app that lets users discover, create, and manage local events in real time. LiveIt connects event organizers with attendees, offering ticketing, RSVP management, push notifications, and live event updates — all in a sleek, consumer-grade experience.",
-        "category": "Native Mobile App"
-      },
-      "medconnect": {
-        "title": "MedConnect — Telemedicine Platform",
-        "description": "A HIPAA-compliant telemedicine SaaS connecting patients with healthcare providers through secure video consultations, electronic prescriptions, and medical record management. Built to serve clinics and independent practitioners with a complete digital health workflow.",
-        "category": "Healthcare SaaS"
-      },
-      "educore": {
-        "title": "EduCore — School Management SaaS",
-        "description": "A comprehensive school administration platform covering student enrollment, attendance tracking, grade management, parent communication, and fee collection. EduCore is built to streamline operations for schools of all sizes, from small private institutions to large networks.",
-        "category": "Education SaaS"
-      },
-      "securepay": {
-        "title": "SecurePay — C2C Payment Security App",
-        "description": "A secure consumer-to-consumer payment platform that adds a trust and verification layer to peer-to-peer transactions. SecurePay uses escrow logic, identity verification, and fraud detection algorithms to protect both buyers and sellers in marketplace transactions.",
-        "category": "FinTech SaaS"
+        "description": "A native mobile experience for discovering, creating, and running local events in real time. Organizers and attendees stay aligned with ticketing, RSVP management, reminders, and live updates in one consumer-grade flow.",
+        "category": "Event management"
       }
     },
-    "learnMore": "Learn More",
     "ctaText": "Ready to add your product to this list?",
     "ctaButton": "Request Your Project"
   },

@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useTranslation } from 'react-i18next';
-import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
 
 const Portfolio = () => {
   const { t } = useTranslation();
@@ -11,10 +10,10 @@ const Portfolio = () => {
   });
 
   const projects = [
+    { id: 'zuricards', categoryColor: 'bg-amber-500/10 text-amber-400 border-amber-500/30', stack: ['Next.js', 'RSVP & invites', 'Host & guest hub'], accentColor: 'from-amber-500 to-orange-500' },
+    { id: 'kabasika', categoryColor: 'bg-blue-500/10 text-blue-400 border-blue-500/30', stack: ['Web platform', 'MoMo & cards', 'OHADA tax', 'AI copilot'], accentColor: 'from-blue-500 to-cyan-500' },
+    { id: 'ileralive', categoryColor: 'bg-rose-500/10 text-rose-400 border-rose-500/30', stack: ['Telehealth', 'Video & clinic', 'HIPAA-aligned', 'Local payments'], accentColor: 'from-rose-500 to-pink-500' },
     { id: 'liveit', categoryColor: 'bg-orange-500/10 text-orange-400 border-orange-500/30', stack: ['React Native', 'Node.js', 'Firebase', 'Stripe'], accentColor: 'from-orange-500 to-amber-500' },
-    { id: 'medconnect', categoryColor: 'bg-blue-500/10 text-blue-400 border-blue-500/30', stack: ['React', 'Python/FastAPI', 'AWS', 'WebRTC'], accentColor: 'from-blue-500 to-cyan-500' },
-    { id: 'educore', categoryColor: 'bg-green-500/10 text-green-400 border-green-500/30', stack: ['Next.js', 'Node.js', 'PostgreSQL', 'AWS S3'], accentColor: 'from-green-500 to-emerald-500' },
-    { id: 'securepay', categoryColor: 'bg-purple-500/10 text-purple-400 border-purple-500/30', stack: ['React Native', 'Go', 'Stripe', 'AWS Lambda'], accentColor: 'from-purple-500 to-violet-500' },
   ];
 
   const container = {
@@ -77,7 +76,7 @@ const Portfolio = () => {
                 </p>
 
                 {/* Tech Stack */}
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="flex flex-wrap gap-2">
                   {project.stack.map((tech) => (
                     <span
                       key={tech}
@@ -87,11 +86,6 @@ const Portfolio = () => {
                     </span>
                   ))}
                 </div>
-
-                <button className="flex items-center text-orange-400 hover:text-orange-300 font-medium text-sm transition-colors duration-300 group/btn">
-                  {t('portfolio.learnMore')}
-                  <ArrowTopRightOnSquareIcon className="w-4 h-4 ml-1.5 transition-transform duration-300 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
-                </button>
               </div>
             </motion.div>
           ))}
